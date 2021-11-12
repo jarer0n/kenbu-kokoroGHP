@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Кэнбу Кокоро</title>
+</head>
+<body>
+        
+    <div class="wrapper">
+        <main class="main">
+    <div class="background-left"></div>
+    <div class="background-right"></div>
+    <div class="container">
+        <div class="hello">
+            <h2 class="hello__title"><span>Здравствуйте!</span></h2>
+            <div class="hello__text"><span>
+                Вы находитесь на странице оплаты школы Кэнбу Кокоро. Пожалуйста, заполните таблицу ниже
+                    и следуйте инструкциям платежной системы при оплате
+            </span></div>
+        </div>
+        <div class="form">
+            <form class="form__form" id="form" action="#">
+                <div class="form__title">ФИО ученицы</div>
+                <div class="form__subtitle">Введите полностью ФИО занимающегося</div>
+                <input class="form__fio-input form_input" type="text" name="fio" placeholder=" " required>
+                <div class="form__contacts">
+                    <div class="form__contacts-phone">
+                        <div class="form__title">Телефон</div>
+                        <input class="form__phone-input form_input" type="text"  name="phone" placeholder=" " required >
+                    </div>
+                    <div class="form__contacts-email">
+                        <div class="form__title">E-mail</div>
+                        <input class="form__mail-input form_input" type="email" name="email" placeholder=" " required>
+                        <span class="form__error">В формате: example@site.com</span>
+                        
+                    </div>
+                </div>
+                <div class="form__group">
+                    <div class="form__title group-title"><span>Группа</span></div>
+                    <div class="form__subtitle group-subtitle"><span>Выберите из списка группу, в которой вы занимаетесь. <br> Группы указаны по метро и началу занятий в будний день.</span>
+                    </div>
+                     <select class="form__group-input form_input has_arrow" name="group" >
+                         <option value="Rim" selected>Римская 18:00</option>
+                         <option value="Rim">Римская 20:00</option>
+                         <option value="Rim">Римская 22:00</option>
+                     </select>
+                </div>
+                <div class="form__pay">
+                        <div class="form__pay-lessons">
+                            <div class="form__title">Оплата занятий</div>
+                            <select class="form__lesson-input form_input has_arrow" type="text" name="lessons">
+                                <option value="8lessons">Абонемент на 8 занятий в течение 1 месяца</option>
+                                <option value="8lessons">Абонемент на 10 занятий в течение 1 месяца</option>
+                                <option value="8lessons">Абонемент на 12 занятий в течение 1 месяца</option>
+                            </select>
+                        </div>
+                        <div class="form__pay-count">
+                            <div class="form__title">Количество разовых занятий</div>
+                            <div class="form__count-item form_input">
+                                <button type="button" class="form__count-button" data-direction="minus"><picture><source srcset="img/arrow_left.webp" type="image/webp"><img src="img/arrow_left.png" alt=""></picture></button>
+                                <input class="form__count-input" type="text" value="3" name="count">
+                                <button type="button" class="form__count-button" data-direction="plus"><picture><source srcset="img/arrow_right.webp" type="image/webp"><img src="img/arrow_right.png" alt=""></picture></button>
+                            </div>
+
+                        </div>
+                    </div>
+                <div class="form__month">
+                    <div class="form__title">Оплата за месяц</div>
+                    <select class="form__month-input form_input has_arrow" name="month" type="text">
+                        <option value="month" selected>Январь</option>
+                        <option value="month">Февраль</option>
+                        <option value="month">Март</option>
+                    </select>
+                </div>
+                <div class="form__sum">
+                    Сумма к оплате:<span class="form_sum-value">8500р</span>
+                </div>
+                <div class="form__agreement">
+                    <div class="form__agreement-item">
+                        <label><input class="agreement-checkbox" type="checkbox" name="personal_info" value="yes" required></label>
+                        <span class="form__agreement-argument">Я даю свое согласие на обработку персональных данных</span>
+                    </div>
+                    <div class="form__agreement-item">
+                        <label><input class="agreement-checkbox " type="checkbox" name="offer_agreement" value="yes" required></label>
+                        <span class="form__agreement-argument">Я принимаю <a href="#" target="_blank">договор-оферту</a></span>
+                    </div>
+                    <div class="form__agreement-item">
+                        <label><input class="agreement-checkbox" type="checkbox" name="privacy_policy" value="yes" required></label>
+                        <span class="form__agreement-argument">Я ознакомлен с <a href="#" target="_blank">Политикой конфиденциальности</a></span>
+                    </div>
+                </div>
+                <button class="form_button-pay" type="submit" name="paybtn">Оплатить</button>
+            </form>
+        </div>
+    </div>
+</main>
+        <footer class="footer">
+<div class="container-footer">
+    <div class="footer__row">
+        <div class="footer__left">
+            <div class="left__support">
+                <div class="left__title">Техподдержка:</div>
+                <a href="" class="left__support-link" target="_blank">kenbu-kokoro.ru</a>
+            </div>
+            <div class="left__schedule">
+                <div class="left__title">Время работы:</div>
+                <div class="left_schedule-info">
+                    Вторник, среда, четверг, суббота - с 10:00 до 19:00. <br>
+                    Понедельник, пятница, воскресенье - выходной
+                </div>
+            </div>
+            <div class="left_paylinks">
+                <a href="#" class="left_paylink" target="_blank"><picture><source srcset="img/visa.webp" type="image/webp"><img src="img/visa.png" alt="VISA"></picture></a>
+                <a href="#" class="left_paylink" target="_blank"><picture><source srcset="img/mastercard.webp" type="image/webp"><img src="img/mastercard.png" alt="MasterCard"></picture></a>
+                <a href="#" class="left_paylink" target="_blank"><picture><source srcset="img/mir.webp" type="image/webp"><img src="img/mir.png" alt="MIR"></picture></a>
+                <a href="#" class="left_paylink" target="_blank"><picture><source srcset="img/tinkoff.webp" type="image/webp"><img src="img/tinkoff.png" alt="Tinkoff"></picture></a>
+            </div>
+            <div class="left_sociallinks">
+                <a href="#" class="left_sociallink" target="_blank"><picture><source srcset="img/web.webp" type="image/webp"><img src="img/web.png" alt="kenbu-kokoro.ru"></picture><span>kenbu-kokoro.ru</span></a>
+                <a x href="#" class="left_sociallink" target="_blank"><picture><source srcset="img/inst.webp" type="image/webp"><img src="img/inst.png" alt="Instagram"></picture></a>
+            </div>
+        </div>
+        <div class="footer__right">
+            <div class="right_requisites">
+                ОГРНИП 0000000000 <br>
+                ИНН 00000000000 <br>
+                ИП Иванова Юлия Ивановна
+            </div>
+            <div class="right_links">
+                <a href="#" class="right_link" target="_blank">Политика конфиденциальности</a>
+                <a href="#" class="right_link" target="_blank">Договор-оферта</a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
